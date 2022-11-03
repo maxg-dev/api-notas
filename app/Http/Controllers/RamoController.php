@@ -15,7 +15,7 @@ class RamoController extends Controller
      */
     public function index()
     {
-        return Ramo::all();
+        return Ramo::all()->load('nota');
     }
 
     /**
@@ -40,7 +40,7 @@ class RamoController extends Controller
      */
     public function show(Ramo $ramo)
     {
-        return $ramo;
+        return $ramo->load('nota');
     }
 
     /**

@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\{Model,SoftDeletes};
 
-class Ramo extends Model
+class Nota extends Model
 {
     use HasFactory;
     use SoftDeletes;
 
-    public function nota(){
-        return $this->hasMany(Nota::class);
+    public function ramo(){
+        return $this->belongsTo(Ramo::class);
     }
 }
